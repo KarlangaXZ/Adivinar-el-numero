@@ -1,64 +1,48 @@
-## Link al curso completo de Javascript en Youtube:
-[VIDEO CURSO GRATIS COMPLETO: JavaScript Desde Cero por Sergie Code](https://youtu.be/N8Xt5rP_DUo)
+# Juego de Adivinar el Número
+
+Este es un simple juego de adivinar un número desarrollado en HTML, CSS y JavaScript. El objetivo del juego es adivinar un número aleatorio entre 1 y 100.
+
+## Descripción
+
+El jugador debe ingresar un número entre 1 y 100 y comprobar si es el número correcto. El juego indicará si el número ingresado es demasiado alto, demasiado bajo o correcto. También muestra la cantidad de intentos realizados. Si el jugador adivina el número, puede reiniciar el juego.
+
+## Tecnologías utilizadas
+
+- `HTML`
+- `CSS`
+- `JavaScript`
+
+## Instrucciones
+
+1. Clona este repositorio o descarga los archivos.
+2. Abre el archivo `index.html` en tu navegador web.
+3. Introduce un número entre 1 y 100 en el campo de entrada.
+4. Haz clic en el botón "Comprobar" para verificar si has adivinado el número.
+5. Sigue las instrucciones en pantalla para ajustar tu próxima suposición.
+6. Si adivinas el número, puedes hacer clic en "Intentalo otra vez" para reiniciar el juego.
 
 
-# Tutorial de Javascript: Juego de Adivinanza
+## Capturas de pantalla
 
-Link para ver el resultado: [JUEGO ADIVINANZA TRABAJO TERMINADO](https://juego-adivinanza-tutorial-js.netlify.app/)
+![Captura de Pantalla del Juego](https://github.com/KarlangaXZ/Adivinar-el-numero/blob/main/img/muestraPG.png?raw=true)
 
-Este repositorio contiene el código de un juego de adivinanza implementado en Javascript. El juego consiste en adivinar un número aleatorio generado por el programa en un rango del 1 al 100.
+## Funcionalidades
 
-## Código Javascript
+- Generación de un número aleatorio entre 1 y 100.
+- Verificación de la entrada del usuario para comprobar si es un número válido.
+- Indicaciones al usuario si el número ingresado es mayor, menor o igual al número generado.
+- Contador de intentos realizados.
+- Opción para reiniciar el juego.
 
-El archivo Javascript principal es `script.js`, que contiene las siguientes funciones y variables:
+## Contribuciones
 
-### Generar un número aleatorio
+Las contribuciones son bienvenidas. Por favor, abre un issue para discutir lo que te gustaría cambiar.
 
-    let numeroAzar = Math.floor(Math.random() * 100) + 1;
+## Licencia
 
-Esta línea de código genera un número aleatorio entre 1 y 100 y lo guarda en la variable `numeroAzar`. Utilizamos `Math.random()` para generar un número decimal entre 0 y 1, luego lo multiplicamos por 100 para obtener un número entre 0 y 100, y finalmente utilizamos `Math.floor()` para redondear hacia abajo y obtener un número entero entre 0 y 99. Al sumar 1 al resultado, obtenemos un número aleatorio entre 1 y 100.
+Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo `LICENSE` para obtener más información.
 
-### Obtener elementos del DOM
+## Autor
 
-    let numeroEntrada = document.getElementById('numeroEntrada');
-    let mensaje = document.getElementById('mensaje');
+KarlangaXZ
 
-Estas líneas de código obtienen referencias a los elementos del Document Object Model (DOM) utilizando el método `getElementById()`. El elemento con el id "numeroEntrada" representa el campo de entrada donde el usuario ingresa su número, y el elemento con el id "mensaje" muestra mensajes de retroalimentación al usuario.
-
-### Función para comprobar el número ingresado
-
-    function chequearResultado() {
-        let numeroIngresado = parseInt(numeroEntrada.value);
-    
-        if (isNaN(numeroIngresado) || numeroIngresado < 1 || numeroIngresado > 100) {
-            mensaje.textContent = 'Por favor, introduce un número válido entre 1 y 100.';
-            return;
-        }
-    
-        if (numeroIngresado === numeroAzar) {
-            mensaje.textContent = '¡Felicidades! ¡Has adivinado el número correcto!';
-            mensaje.style.color = 'green';
-            numeroEntrada.disabled = true;
-        } else if (numeroIngresado < numeroAzar) {
-            mensaje.textContent = 'El número es mayor. Intenta de nuevo.';
-            mensaje.style.color = 'red';
-        } else {
-            mensaje.textContent = 'El número es menor. Intenta de nuevo.';
-            mensaje.style.color = 'red';
-        }
-    }
-
-Esta función se llama cuando el usuario presiona el botón de "Comprobar". Primero, obtiene el número ingresado por el usuario utilizando `numeroEntrada.value` y lo convierte a un número entero utilizando `parseInt()`. Luego, verifica si el número ingresado es un número válido dentro del rango esperado (1-100). Si el número no es válido, se muestra un mensaje de error en el elemento "mensaje" y se devuelve de la función.
-
-Si el número ingresado es válido, se compara con el número generado aleatoriamente. Si son iguales, se muestra un mensaje de felicitación y se deshabilita el campo de entrada. Si el número ingresado es menor que el número aleatorio, se muestra un mensaje indicando que el número es mayor. Si es mayor, se muestra un mensaje indicando que el número es menor. En ambos casos, el mensaje se muestra en el elemento "mensaje" y se cambia el color del texto al rojo.
-
-## Uso del juego
-
-1.  Clona o descarga este repositorio en tu computadora.
-2.  Abre el archivo `index.html` en tu navegador web.
-3.  Verás una interfaz de usuario con un campo de entrada y un botón de "Comprobar".
-4.  Ingresa un número válido entre 1 y 100 en el campo de entrada y presiona el botón de "Comprobar".
-5.  Dependiendo de tu número ingresado, recibirás mensajes indicando si el número es mayor o menor que el número aleatorio, o si has adivinado correctamente.
-6.  Si adivinas correctamente, el campo de entrada se deshabilitará y se mostrará un mensaje de felicitación.
-
-¡Diviértete jugando y practicando tus habilidades en Javascript!
