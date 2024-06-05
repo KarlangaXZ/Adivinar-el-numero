@@ -42,7 +42,7 @@ Las contribuciones son bienvenidas. Por favor, abre un issue para discutir lo qu
 
 Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo `LICENSE` para obtener más información.
 
-##Autor
+## Autor
 
 KarlangaXZ
 
