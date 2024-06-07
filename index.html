@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./img/favicon-32x32.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <title>Juego de adivinar el número</title>
 </head>
 
@@ -14,10 +15,20 @@
     <h1>Adivina el número</h1>
     <p>Introduce un número entre 1 y 100:</p>
     <input type="number" id="numeroEntrada">
+    <input type="text" id="nombre" placeholder="Tu nombre">
     <button onclick="chequearResultado()">Comprobar</button>
     <p id="mensaje">A jugar! ingresa un numero</p>
     <h3>Cantidad de intentos: <p id="intento">0</p></h3>
     <button id="cargar">Intentalo otra vez</button>
+    <button onclick="mostrarIntentos()">Ver Intentos</button>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <h2>Historial de Intentos</h2>
+            <div id="listaIntentos"></div>
+        </div>
+    </div>
 
     <script src="./script.js"></script>
 </body>

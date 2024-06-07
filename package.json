@@ -1,0 +1,17 @@
+{
+  "name": "adivinar-el-numero",
+  "version": "1.0.0",
+  "description": "Este es un simple juego de adivinar un número desarrollado en HTML, CSS y JavaScript. El objetivo del juego es adivinar un número aleatorio entre 1 y 100.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "mysql": "^2.18.1"
+  }
+}
