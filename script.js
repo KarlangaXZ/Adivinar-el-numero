@@ -1,3 +1,4 @@
+// script.js
 const SECRET_KEY = 'mi_secreto_super_seguro';
 
 function generateRandomNumber() {
@@ -54,7 +55,7 @@ function guardarIntento() {
         alert('Por favor ingresa tu nombre');
         return;
     }
-    fetch('/guardar-intento', {
+    fetch('/.netlify/functions/server/guardar-intento', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ nombre, intentos: conteo })
@@ -65,7 +66,7 @@ function guardarIntento() {
 }
 
 function mostrarIntentos() {
-    fetch('/obtener-intentos')
+    fetch('/.netlify/functions/server/obtener-intentos')
         .then(response => response.json())
         .then(data => {
             const listaIntentos = document.getElementById('listaIntentos');
